@@ -1,42 +1,40 @@
+import "dotenv/config";
+import dns from "dns";
+dns.setServers(["8.8.8.8", "8.8.4.4"]);
 import express from "express";
-import dotenv from "dotenv";
-
-import authRoutes from "./routes/auth.route.js";
-import messageRoutes from "./routes/message.route.js";
-
-dotenv.config();
+import connectDB from "./lib/db.js";
 
 const app = express();
 
-// Middleware
 app.use(express.json());
 
-// Port
-const PORT = process.env.PORT || 3000;
-
-// Test route
+// Home route
 app.get("/", (req, res) => {
-  res.status(200).json({
-    success: true,
-    message: "Chatify Backend is Running 🚀",
-  });
+  res.send("Chatify Backend is Running 🚀");
 });
 
-// Authentication routes
-app.use("/api/auth", authRoutes);
+// Signup
+app.get("/api/auth/signup", (req, res) => {
+  res.send("Signup endpoint");
+});
 
-// Message routes
-app.use("/api/message", messageRoutes);
+// Login
+app.get("/api/auth/login", (req, res) => {
+  res.send("Login endpoint");
+});
 
-// 404 route
-app.use((req, res) => {
-  res.status(404).json({
-    success: false,
-    message: "Route not found",
-  });
+// Logout
+app.get("/api/auth/logout", (req, res) => {
+  res.send("Logout endpoint");
+});
+
+// Update
+app.get("/api/auth/update", (req, res) => {
+  res.send("Update endpoint");
 });
 
 // Start server
-app.listen(PORT, () => {
-  console.log(`🚀 Chatify Backend running on http://localhost:${PORT}`);
+app.listen(3000, async () => {
+  console.log("Server running on port 3000");
+  await connectDB();
 });
