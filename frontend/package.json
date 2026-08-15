@@ -1,4 +1,4 @@
-{
+﻿{
   "name": "frontend",
   "private": true,
   "version": "0.0.0",
@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "npm install --prefix backend && npm install --prefix frontend && npm run build",
-     "start": "npm run --prefix backend"
+    "start": "npm run --prefix backend",
     "lint": "eslint .",
     "preview": "vite preview"
   },
