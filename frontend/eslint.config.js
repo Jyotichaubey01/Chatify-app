@@ -10,6 +10,7 @@ export default defineConfig([
     files: ['**/*.{js,jsx}'],
     extends: [
       js.configs.recommended,
+<<<<<<< HEAD
       reactHooks.configs['recommended-latest'],
       reactRefresh.configs.vite,
     ],
@@ -24,6 +25,14 @@ export default defineConfig([
     },
     rules: {
       'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+=======
+      reactHooks.configs.flat.recommended,
+      reactRefresh.configs.vite,
+    ],
+    languageOptions: {
+      globals: globals.browser,
+      parserOptions: { ecmaFeatures: { jsx: true } },
+>>>>>>> 360e461de6e13952d0068b0fa2ea4f116c3e68e1
     },
   },
 ])

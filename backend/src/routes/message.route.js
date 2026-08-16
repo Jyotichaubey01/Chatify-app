@@ -1,4 +1,5 @@
 import express from "express";
+<<<<<<< HEAD
 import {
   getAllContacts,
   getChatPartners,
@@ -20,3 +21,26 @@ router.get("/:id", getMessagesByUserId);
 router.post("/send/:id", sendMessage);
 
 export default router;
+=======
+
+const router = express.Router();
+
+// Get all messages
+router.get("/", (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: "Message endpoint is working",
+  });
+});
+
+// Send a message
+router.post("/", (req, res) => {
+  res.status(201).json({
+    success: true,
+    message: "Message sent successfully",
+    data: req.body,
+  });
+});
+
+export default router;
+>>>>>>> 360e461de6e13952d0068b0fa2ea4f116c3e68e1

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import "dotenv/config";
 
 export const ENV = {
@@ -15,3 +16,7 @@ export const ENV = {
   ARCJET_KEY: process.env.ARCJET_KEY,
   ARCJET_ENV: process.env.ARCJET_ENV,
 };
+=======
+
+
+>>>>>>> 360e461de6e13952d0068b0fa2ea4f116c3e68e1

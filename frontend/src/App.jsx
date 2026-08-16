@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Navigate, Route, Routes } from "react-router";
 import ChatPage from "./pages/ChatPage";
 import LoginPage from "./pages/LoginPage";
@@ -35,3 +36,17 @@ function App() {
   );
 }
 export default App;
+=======
+
+function App() {
+  return (
+    <div>
+      <h1 className="text-3xl font-bold underline text-red-500" >
+        Hello world!
+      </h1>
+    </div>
+  )
+
+}
+export default App;
+>>>>>>> 360e461de6e13952d0068b0fa2ea4f116c3e68e1
